@@ -1,0 +1,22 @@
+<div class="card-container" *ngIf="launches$ | async as launches; else loading">
+  <cdk-virtual-scroll-viewport itemSize="50" class="list-holder">
+    <a routerLink="/launch/{{launch.flight_number}}" class="card"
+      *cdkVirtualFor="let launch of launches; let i = index; trackBy: trackByIdx">
+      <span class="d-flex content-space-between align-center">
+        <span class="d-flex align-center">
+          <img src="{{ launch.links.patch.small }}" class="mission-image" />
+          <span class="d-flex flex-column">
+            <span class="mission-name">{{ launch.name }}</span>
+            <span class="mission-date">{{ launch.date_utc | date:'long' }}</span>
+          </span>
+        </span>
+        <span class="error" [class.success]="launch.success">
+          <strong>{{ launch.success ? 'Successful' : 'Failure' }}</strong>
+        </span>
+      </span>
+    </a>
+  </cdk-virtual-scroll-viewport>
+</div>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

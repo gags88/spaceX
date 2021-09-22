@@ -1,0 +1,22 @@
+.header {
+  background-image: url("https://res.cloudinary.com/dacxbqrp3/image/upload/v1532099677/16510243060_42b6169bd4_k_msshaq.jpg");
+  background-position-x: 45%;
+  background-position-y: 5%;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  img {
+    width: 50%;
+    min-height: 50%;
+    min-width: 40%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    margin: 10px;
+    padding-left: 20px;
+  }
+}
+.mission {
+  width: 100%;
+  margin: 10px 0;
+  align-items: flex-start !important;
+}

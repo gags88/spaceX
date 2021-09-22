@@ -1,0 +1,22 @@
+.list-holder {
+  height: 894px;
+  padding: 15px;
+  @media screen and (max-width: 767px) {
+    width: 320px;
+  }
+  width: 600px;
+  .mission {
+    &-image {
+      height: 50px;
+      margin-right: 25px;
+      margin-left: 10px;
+      min-width: 50px;
+    }
+    &-name {
+      color: #000;
+    }
+    &-date {
+      color: #979797;
+    }
+  }
+}
